@@ -1,0 +1,45 @@
+:root{
+    --bgcolor:rgb(0, 0, 0);
+
+}
+body{
+    background-color: var(--bgcolor);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    max-width:auto;
+    height:100vh;
+    flex-wrap:wrap;
+    
+}
+.btn{
+    background-color: var(--bgcolor);
+    color:white;
+    padding:10px;
+    border:1px solid white;
+    border-radius: 5px;
+    width:150px;
+    height:50px;
+    /* box-shadow:0px 0px 20px white, 0px 0px 30px white; */
+    transition:all 0.2s linear;
+    font-size:1.5em;
+    font-family:Times New Roman;
+    animation: glow 3s infinite ease-in-out;
+
+}
+.btn:hover{
+    transform:scale(1.1);
+    background-color: rgb(53, 53, 53);
+    transform:rotate(2.8deg);
+}
+.btn:active{
+    transform: scale(0.95);
+}
+@keyframes glow{
+    0%{ box-shadow:0px 0px 20px red; border-color:red;}
+    30%{ box-shadow:0px 0px 30px orange; border-color:orange;}
+    55%{ box-shadow:0px 0px 40px green; border-color:green;}
+    70%{ box-shadow:0px 0px 50px blue; border-color:blue;}
+    80%{ box-shadow:0px 0px 60px yellow; border-color:yellow}
+    0%{ box-shadow:0px 0px 70px red; border-color:red;}
+}
